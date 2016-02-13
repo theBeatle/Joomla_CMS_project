@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="0.1.0" client="site" method="upgrade">
+    <!-- modul description -->
+	<name>Get User IP</name> 
+	<author>Oleh Knyaz</author> 
+	<authorEmail>oleh.Knyaz@gmail.com</authorEmail> 
+   	<description>Provides User with it's IP</description>
+	<files>
+		<filename module="mod_getUserIP">mod_getuserip.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<filename>tmpl/default.php</filename>
+		<filename>tmpl/index.html</filename>
+	</files>
+
+	<languages>
+        	<language tag="en-GB">en-GB.mod_getuserip.ini</language>
+    </languages>
+ 
+	<config>
+            <fields name="params">
+                <fieldset name="basic">
+                    <field 
+                        name="moduleclass_sfx" 
+                        type="text" 
+                        default="" 
+                        label="LABEL_CLASS_SUFFIX" 
+                        description="DESC_MOD_SUFFIX">
+                    </field>
+                     <field 
+                        name="@spacer" 
+                        type="spacer" 
+                        default="" 
+                        label="" 
+                        description="">
+                    </field>
+
+                </fieldset>
+            </fields>
+    </config>
+</extension>
