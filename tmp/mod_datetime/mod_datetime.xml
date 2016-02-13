@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="0.1.0" client="site" method="upgrade">
+    <!-- modul description -->
+	<name>Date And Time</name> 
+	<author>Oleh Knyaz</author> 
+	<authorEmail>oleh.Knyaz@gmail.com</authorEmail> 
+   	<description>Provides Time And Date. All Timezones Included</description>
+	
+	<files>
+		<filename module="mod_datetime">mod_datetime.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<filename>tmpl/default.php</filename>
+		<filename>tmpl/index.html</filename>
+	</files>
+ 
+    <languages>
+        <language tag="en-GB">en-GB.mod_datetime.ini</language>
+    </languages>
+ 
+	<config>
+            <fields name="params">
+                <fieldset name="basic">
+                    <field 
+                        name="moduleclass_sfx" 
+                        type="text" 
+                        default="" 
+                        label="LABEL_CLASS_SUFFIX" 
+                        description="DESC_MOD_SUFFIX">
+                    </field>
+                     <field 
+                        name="@spacer" 
+                        type="spacer" 
+                        default="" 
+                        label="" 
+                        description="">
+                    </field>
+                    
+<field name="mytimezone" type="timezone" default="2" label="Select a timezone" description="" /> 
+					<field 
+					     name="showtime" 
+					     type="radio" 
+						 default="1" 
+						 label="Display Time :" 
+						 description="">
+					     <option value="0">No</option>
+					     <option value="1">Yes</option>
+				    </field>
+				    					
+
+				    <field 
+					      name="showdate" 
+						  type="radio" 
+						  default="1" 
+						  label="Show Date :" 
+						  description="">
+					      <option value="0">No</option>
+					      <option value="1">Yes</option>
+			     	</field>
+					
+					<field 
+					      name="showday" 
+						  type="radio" 
+						  default="1" 
+						  label="Show Day :" 
+						  description="">
+					      <option value="0">No</option>
+					      <option value="1">Yes</option>
+			     	</field>
+					
+                </fieldset>
+            </fields>
+    </config>
+</extension>
